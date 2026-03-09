@@ -569,46 +569,6 @@ def build():
         pdf.multi_cell(0, 5, r)
         pdf.ln(1)
 
-    # ── Appendix ──────────────────────────────────────────────────────────
-    pdf.section('Appendix A', 'Prompt Templates')
-    pdf.subsection('Baseline Prompt')
-    pdf.set_font('U', '', 8.5)
-    pdf.set_text_color(*Paper.C_SEC)
-    pdf.set_fill_color(245, 245, 245)
-    pdf.multi_cell(0, 5,
-        "Task: {task_instruction}\n"
-        "Observation: {scene_description}\n"
-        "Action: [direct action, no reasoning]",
-        fill=True)
-    pdf.ln(2)
-
-    pdf.subsection('PhysCoT Prompt (Block Toppling Example)')
-    pdf.set_font('U', '', 8)
-    pdf.set_text_color(*Paper.C_SEC)
-    pdf.multi_cell(0, 4.5,
-        "Step A. Task decomposition:\n"
-        "  Goal: topple block. Sub-goal: torque > restoring torque.\n\n"
-        "Step B. Relevant physics:\n"
-        "  tau_push = F*y_c > m*g*(w/2). Critical: y_c* = m*g*w/(2*F).\n"
-        "  If y_c < y_c*: block slides. If y_c > y_c*: block topples.\n\n"
-        "Step C. Visual physical estimates:\n"
-        "  Aspect h/w, COM at 50%, pivot edge, friction regime.\n\n"
-        "Step D. Action implication:\n"
-        "  Contact at {y_c}% height, lateral push, tau_push > tau_crit.",
-        fill=True)
-    pdf.ln(3)
-
-    pdf.section('Appendix B', 'Trial Logs and Videos')
-    pdf.body(
-        "Full trial logs (40 trials) available in results/metrics/all_trials.json. "
-        "Each entry contains: experiment name, method, trial ID, seed, environment "
-        "parameters, scene description, full reasoning text (PhysCoT only), action "
-        "summary, success flag, task metrics, failure mode, and video path.\n\n"
-        "MP4 videos (40 total) stored in results/videos/:\n"
-        "  exp1_block_toppling/{baseline,physcot}/trial_XX.mp4\n"
-        "  exp2_tool_selection/{baseline,physcot}/trial_XX.mp4"
-    )
-
     # Save
     pdf.output(OUT_PATH)
     print(f'Paper PDF saved: {OUT_PATH}')
