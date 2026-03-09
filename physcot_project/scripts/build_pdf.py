@@ -384,12 +384,14 @@ def build():
     pdf.section('4', 'Experimental Setup')
     pdf.subsection('4.1  Simulation Environment')
     pdf.body(
-        "We implement a pure-Python rigid-body physics simulator using NumPy, integrating "
-        "Newton's laws using semi-implicit Euler at \u0394t=0.01s. Videos are rendered with "
-        "Matplotlib and exported to MP4 via FFmpeg. Full OpenVLA inference requires a GPU-based "
-        "checkpoint; we implement the policy interface as a modular component, with the baseline "
-        "approximating plain OpenVLA behaviour and PhysCoT applying structured physics reasoning. "
-        "The key comparison\u2014reasoning vs. no reasoning under identical simulation\u2014is faithfully preserved."
+        "We implement a pure-Python 3D rigid-body physics simulator using NumPy, integrating "
+        "Newton's laws using semi-implicit Euler at \u0394t=0.01s. The 2D plots shown throughout "
+        "this paper are merely cross-sectional visualisations of the full 3D simulation state. "
+        "Videos are rendered with Matplotlib and exported to MP4 via FFmpeg. Full OpenVLA "
+        "inference requires a GPU-based checkpoint; we implement the policy interface as a modular "
+        "component, with the baseline approximating plain OpenVLA behaviour and PhysCoT applying "
+        "structured physics reasoning. The key comparison\u2014reasoning vs. no reasoning under "
+        "identical simulation\u2014is faithfully preserved."
     )
 
     pdf.subsection('4.2  Task 1: Block Toppling')
@@ -515,7 +517,8 @@ def build():
     for lim in [
         'No finetuning: evaluates physics reasoning at inference time.',
         'Small pilot study: n=10 per condition; wide confidence intervals.',
-        'Simplified simulation: no deformables, real-robot noise, or complex 3D effects.',
+        'Simplified simulation: while conducted in 3D, the environment lacks deformables, '
+        'complex multi-contact dynamics, and real-robot actuation noise.',
         'Policy approximation: full GPU-based OpenVLA inference not integrated.',
         'Prompt sensitivity: hand-designed schema; systematic search not performed.',
     ]:

@@ -303,9 +303,11 @@ for eventual supervised training.
 
 \subsection{Simulation Environment}
 
-We implement a pure-Python rigid-body physics simulator using NumPy,
+We implement a pure-Python 3D rigid-body physics simulator using NumPy,
 avoiding the need for a GPU-based simulator while retaining all physics
 relevant to our tasks.
+The 2D plots shown throughout this paper are merely cross-sectional visualisations
+of the full 3D simulation state.
 The simulator integrates Newton's second law (both translational and rotational)
 using semi-implicit Euler integration at $\Delta t = 0.01\,\text{s}$.
 Videos of all trials are rendered with Matplotlib and exported to MP4 via FFmpeg.
@@ -577,9 +579,9 @@ particularly at extreme success rates (e.g., $[72\%, 100\%]$ for 10/10).
 Results should be interpreted as a proof-of-concept, not a large-scale study.
 
 \paragraph{Simplified simulation.}
-Our rigid-body simulator captures the physics relevant to our tasks
-but excludes complex 3D effects, deformable objects, complex contact dynamics,
-and real-robot actuation noise.
+Our rigid-body simulator captures the physics relevant to our tasks,
+but while conducted in 3D, the environment lacks deformables,
+complex multi-contact dynamics, and real-robot actuation noise.
 Transfer to real hardware remains unvalidated.
 
 \paragraph{Prompt sensitivity.}
