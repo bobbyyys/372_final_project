@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhysCoT Trial Log Schema",
+  "description": "Schema for a single trial in a PhysCoT experiment",
+  "type": "object",
+  "required": [
+    "experiment_name", "method_name", "trial_id", "random_seed",
+    "env_params", "task_instruction", "scene_description",
+    "reasoning_text", "action_summary", "success", "metrics",
+    "failure_mode", "video_path"
+  ],
+  "properties": {
+    "experiment_name": {
+      "type": "string",
+      "enum": ["block_toppling", "tool_selection"],
+      "description": "Name of the experiment family"
+    },
+    "method_name": {
+      "type": "string",
+      "enum": ["baseline", "physcot", "generic_cot"],
+      "description": "Policy / method used"
+    },
+    "trial_id": {
+      "type": "integer",
+      "description": "Trial index within this method+experiment"
+    },
+    "random_seed": {
+      "type": "integer",
+      "description": "Random seed used for environment initialisation"
+    },
+    "env_params": {
+      "type": "object",
+      "description": "Environment-specific parameters for this trial"
+    },
+    "task_instruction": {
+      "type": "string",
+      "description": "Natural language task instruction given to the policy"
+    },
+    "scene_description": {
+      "type": "string",
+      "description": "Text description of the scene observation"
+    },
+    "reasoning_text": {
+      "type": "string",
+      "description": "Full PhysCoT reasoning output (empty string for baseline)"
+    },
+    "action_summary": {
+      "type": "object",
+      "description": "Summary of actions taken in this trial"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether the trial was successful"
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Task-specific metric values"
+    },
+    "failure_mode": {
+      "type": "string",
+      "description": "Failure mode label (or 'success' if succeeded)",
+      "examples": [
+        "success",
+        "pushed_too_low_sliding",
+        "pushed_too_low_insufficient_torque",
+        "failed_to_make_contact",
+        "insufficient_torque",
+        "unstable_approach",
+        "wrong_tool_path_blocked",
+        "wrong_tool_inefficient",
+        "correct_tool_wrong_grasp",
+        "moved_wrong_direction"
+      ]
+    },
+    "video_path": {
+      "type": "string",
+      "description": "Relative path to the rollout video MP4"
+    },
+    "elapsed_s": {
+      "type": "number",
+      "description": "Wall-clock time for this trial in seconds"
+    }
+  }
+}

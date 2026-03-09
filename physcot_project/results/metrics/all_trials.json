@@ -1,0 +1,1302 @@
+[
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 0,
+    "random_seed": 0,
+    "env_params": {
+      "block_width_cm": 7,
+      "block_height_cm": 20,
+      "block_mass_kg": 0.4,
+      "friction_coef": 0.45,
+      "aspect_ratio": 2.86
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 7.0cm wide x 20.0cm tall. Mass: 0.40kg. Surface friction coefficient: 0.45. The block is tall and narrow (easy to topple) (aspect ratio 2.9). COM is at height 10.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 25% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.247,
+      "contact_height_cm": 4.9,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 61.71,
+      "final_theta_deg": 61.71,
+      "slid_only": true,
+      "steps": 400
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_00.mp4",
+    "elapsed_s": 0.002
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 1,
+    "random_seed": 1,
+    "env_params": {
+      "block_width_cm": 8,
+      "block_height_cm": 22,
+      "block_mass_kg": 0.5,
+      "friction_coef": 0.5,
+      "aspect_ratio": 2.75
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 8.0cm wide x 22.0cm tall. Mass: 0.50kg. Surface friction coefficient: 0.50. The block is tall and narrow (easy to topple) (aspect ratio 2.8). COM is at height 11.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 27% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.27,
+      "contact_height_cm": 5.9,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 61.2,
+      "final_theta_deg": 61.2,
+      "slid_only": true,
+      "steps": 400
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_01.mp4",
+    "elapsed_s": 0.001
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 2,
+    "random_seed": 2,
+    "env_params": {
+      "block_width_cm": 9,
+      "block_height_cm": 18,
+      "block_mass_kg": 0.45,
+      "friction_coef": 0.55,
+      "aspect_ratio": 2.0
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 9.0cm wide x 18.0cm tall. Mass: 0.45kg. Surface friction coefficient: 0.55. The block is moderate aspect ratio (aspect ratio 2.0). COM is at height 9.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 37% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.373,
+      "contact_height_cm": 6.7,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 60.98,
+      "final_theta_deg": 60.98,
+      "slid_only": true,
+      "steps": 400
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_02.mp4",
+    "elapsed_s": 0.001
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 3,
+    "random_seed": 3,
+    "env_params": {
+      "block_width_cm": 6,
+      "block_height_cm": 24,
+      "block_mass_kg": 0.35,
+      "friction_coef": 0.4,
+      "aspect_ratio": 4.0
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 6.0cm wide x 24.0cm tall. Mass: 0.35kg. Surface friction coefficient: 0.40. The block is tall and narrow (easy to topple) (aspect ratio 4.0). COM is at height 12.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 66% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.661,
+      "contact_height_cm": 15.9,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 65.07,
+      "final_theta_deg": 65.07,
+      "slid_only": false,
+      "steps": 16
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_03.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 4,
+    "random_seed": 4,
+    "env_params": {
+      "block_width_cm": 10,
+      "block_height_cm": 16,
+      "block_mass_kg": 0.6,
+      "friction_coef": 0.6,
+      "aspect_ratio": 1.6
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 10.0cm wide x 16.0cm tall. Mass: 0.60kg. Surface friction coefficient: 0.60. The block is moderate aspect ratio (aspect ratio 1.6). COM is at height 8.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 32% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.316,
+      "contact_height_cm": 5.1,
+      "push_direction": "lateral_right"
+    },
+    "success": false,
+    "metrics": {
+      "max_tilt_deg": 16.66,
+      "final_theta_deg": -9.16,
+      "slid_only": false,
+      "steps": 400
+    },
+    "failure_mode": "pushed_too_low_insufficient_torque",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_04.mp4",
+    "elapsed_s": 0.001
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 5,
+    "random_seed": 5,
+    "env_params": {
+      "block_width_cm": 7,
+      "block_height_cm": 21,
+      "block_mass_kg": 0.42,
+      "friction_coef": 0.48,
+      "aspect_ratio": 3.0
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 7.0cm wide x 21.0cm tall. Mass: 0.42kg. Surface friction coefficient: 0.48. The block is tall and narrow (easy to topple) (aspect ratio 3.0). COM is at height 10.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 32% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.325,
+      "contact_height_cm": 6.8,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 62.04,
+      "final_theta_deg": 62.04,
+      "slid_only": true,
+      "steps": 400
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_05.mp4",
+    "elapsed_s": 0.001
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 6,
+    "random_seed": 6,
+    "env_params": {
+      "block_width_cm": 8,
+      "block_height_cm": 19,
+      "block_mass_kg": 0.55,
+      "friction_coef": 0.52,
+      "aspect_ratio": 2.38
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 8.0cm wide x 19.0cm tall. Mass: 0.55kg. Surface friction coefficient: 0.52. The block is tall and narrow (easy to topple) (aspect ratio 2.4). COM is at height 9.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 51% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.509,
+      "contact_height_cm": 9.7,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 61.5,
+      "final_theta_deg": 61.5,
+      "slid_only": false,
+      "steps": 29
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_06.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 7,
+    "random_seed": 7,
+    "env_params": {
+      "block_width_cm": 9,
+      "block_height_cm": 23,
+      "block_mass_kg": 0.38,
+      "friction_coef": 0.42,
+      "aspect_ratio": 2.56
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 9.0cm wide x 23.0cm tall. Mass: 0.38kg. Surface friction coefficient: 0.42. The block is tall and narrow (easy to topple) (aspect ratio 2.6). COM is at height 11.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 51% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.506,
+      "contact_height_cm": 11.6,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 61.24,
+      "final_theta_deg": 61.24,
+      "slid_only": false,
+      "steps": 22
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_07.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 8,
+    "random_seed": 8,
+    "env_params": {
+      "block_width_cm": 6,
+      "block_height_cm": 20,
+      "block_mass_kg": 0.5,
+      "friction_coef": 0.35,
+      "aspect_ratio": 3.33
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 6.0cm wide x 20.0cm tall. Mass: 0.50kg. Surface friction coefficient: 0.35. The block is tall and narrow (easy to topple) (aspect ratio 3.3). COM is at height 10.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 49% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.49,
+      "contact_height_cm": 9.8,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 60.43,
+      "final_theta_deg": 60.43,
+      "slid_only": false,
+      "steps": 23
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_08.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "baseline",
+    "trial_id": 9,
+    "random_seed": 9,
+    "env_params": {
+      "block_width_cm": 11,
+      "block_height_cm": 17,
+      "block_mass_kg": 0.65,
+      "friction_coef": 0.58,
+      "aspect_ratio": 1.55
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 11.0cm wide x 17.0cm tall. Mass: 0.65kg. Surface friction coefficient: 0.58. The block is moderate aspect ratio (aspect ratio 1.5). COM is at height 8.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "[Baseline: no explicit physics reasoning]\nAction: push block laterally at 39% of height.",
+    "action_summary": {
+      "contact_height_frac": 0.393,
+      "contact_height_cm": 6.7,
+      "push_direction": "lateral_right"
+    },
+    "success": false,
+    "metrics": {
+      "max_tilt_deg": 5.97,
+      "final_theta_deg": -3.85,
+      "slid_only": false,
+      "steps": 400
+    },
+    "failure_mode": "failed_to_make_contact",
+    "video_path": "results/videos/exp1_block_toppling/baseline/trial_09.mp4",
+    "elapsed_s": 0.001
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 0,
+    "random_seed": 0,
+    "env_params": {
+      "block_width_cm": 7,
+      "block_height_cm": 20,
+      "block_mass_kg": 0.4,
+      "friction_coef": 0.45,
+      "aspect_ratio": 2.86
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 7.0cm wide x 20.0cm tall. Mass: 0.40kg. Surface friction coefficient: 0.45. The block is tall and narrow (easy to topple) (aspect ratio 2.9). COM is at height 10.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.137 N\u00b7m.\n  Critical contact height: y_c > 2.7 cm (= 0.14 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 1.77 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 2.86 \u2192 very easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 82% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 14%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.650 N\u00b7m > \u03c4_critical = 0.137 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.663,
+      "contact_height_cm": 13.3,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 64.46,
+      "final_theta_deg": 64.46,
+      "slid_only": false,
+      "steps": 17
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_00.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 1,
+    "random_seed": 1,
+    "env_params": {
+      "block_width_cm": 8,
+      "block_height_cm": 22,
+      "block_mass_kg": 0.5,
+      "friction_coef": 0.5,
+      "aspect_ratio": 2.75
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 8.0cm wide x 22.0cm tall. Mass: 0.50kg. Surface friction coefficient: 0.50. The block is tall and narrow (easy to topple) (aspect ratio 2.8). COM is at height 11.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.196 N\u00b7m.\n  Critical contact height: y_c > 3.9 cm (= 0.18 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 2.45 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 2.75 \u2192 very easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 78% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 18%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.715 N\u00b7m > \u03c4_critical = 0.196 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.633,
+      "contact_height_cm": 13.9,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 64.2,
+      "final_theta_deg": 64.2,
+      "slid_only": false,
+      "steps": 22
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_01.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 2,
+    "random_seed": 2,
+    "env_params": {
+      "block_width_cm": 9,
+      "block_height_cm": 18,
+      "block_mass_kg": 0.45,
+      "friction_coef": 0.55,
+      "aspect_ratio": 2.0
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 9.0cm wide x 18.0cm tall. Mass: 0.45kg. Surface friction coefficient: 0.55. The block is moderate aspect ratio (aspect ratio 2.0). COM is at height 9.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.199 N\u00b7m.\n  Critical contact height: y_c > 4.0 cm (= 0.22 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 2.43 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 2.00 \u2192 moderately easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 73% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 22%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.585 N\u00b7m > \u03c4_critical = 0.199 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.63,
+      "contact_height_cm": 11.3,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 61.98,
+      "final_theta_deg": 61.98,
+      "slid_only": false,
+      "steps": 21
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_02.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 3,
+    "random_seed": 3,
+    "env_params": {
+      "block_width_cm": 6,
+      "block_height_cm": 24,
+      "block_mass_kg": 0.35,
+      "friction_coef": 0.4,
+      "aspect_ratio": 4.0
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 6.0cm wide x 24.0cm tall. Mass: 0.35kg. Surface friction coefficient: 0.40. The block is tall and narrow (easy to topple) (aspect ratio 4.0). COM is at height 12.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.103 N\u00b7m.\n  Critical contact height: y_c > 2.1 cm (= 0.09 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 1.37 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 4.00 \u2192 very easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 87% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 9%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.780 N\u00b7m > \u03c4_critical = 0.103 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.661,
+      "contact_height_cm": 15.9,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 65.11,
+      "final_theta_deg": 65.11,
+      "slid_only": false,
+      "steps": 16
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_03.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 4,
+    "random_seed": 4,
+    "env_params": {
+      "block_width_cm": 10,
+      "block_height_cm": 16,
+      "block_mass_kg": 0.6,
+      "friction_coef": 0.6,
+      "aspect_ratio": 1.6
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 10.0cm wide x 16.0cm tall. Mass: 0.60kg. Surface friction coefficient: 0.60. The block is moderate aspect ratio (aspect ratio 1.6). COM is at height 8.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.294 N\u00b7m.\n  Critical contact height: y_c > 5.9 cm (= 0.37 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 3.53 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 1.60 \u2192 requires careful push height.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 59% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 37%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.520 N\u00b7m > \u03c4_critical = 0.294 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.691,
+      "contact_height_cm": 11.0,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 60.46,
+      "final_theta_deg": 60.46,
+      "slid_only": false,
+      "steps": 29
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_04.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 5,
+    "random_seed": 5,
+    "env_params": {
+      "block_width_cm": 7,
+      "block_height_cm": 21,
+      "block_mass_kg": 0.42,
+      "friction_coef": 0.48,
+      "aspect_ratio": 3.0
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 7.0cm wide x 21.0cm tall. Mass: 0.42kg. Surface friction coefficient: 0.48. The block is tall and narrow (easy to topple) (aspect ratio 3.0). COM is at height 10.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.144 N\u00b7m.\n  Critical contact height: y_c > 2.9 cm (= 0.14 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 1.98 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 3.00 \u2192 very easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 82% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 14%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.682 N\u00b7m > \u03c4_critical = 0.144 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.665,
+      "contact_height_cm": 14.0,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 60.34,
+      "final_theta_deg": 60.34,
+      "slid_only": false,
+      "steps": 17
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_05.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 6,
+    "random_seed": 6,
+    "env_params": {
+      "block_width_cm": 8,
+      "block_height_cm": 19,
+      "block_mass_kg": 0.55,
+      "friction_coef": 0.52,
+      "aspect_ratio": 2.38
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 8.0cm wide x 19.0cm tall. Mass: 0.55kg. Surface friction coefficient: 0.52. The block is tall and narrow (easy to topple) (aspect ratio 2.4). COM is at height 9.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.216 N\u00b7m.\n  Critical contact height: y_c > 4.3 cm (= 0.23 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 2.81 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 2.38 \u2192 moderately easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 73% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 23%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.618 N\u00b7m > \u03c4_critical = 0.216 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.638,
+      "contact_height_cm": 12.1,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 62.42,
+      "final_theta_deg": 62.42,
+      "slid_only": false,
+      "steps": 23
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_06.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 7,
+    "random_seed": 7,
+    "env_params": {
+      "block_width_cm": 9,
+      "block_height_cm": 23,
+      "block_mass_kg": 0.38,
+      "friction_coef": 0.42,
+      "aspect_ratio": 2.56
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 9.0cm wide x 23.0cm tall. Mass: 0.38kg. Surface friction coefficient: 0.42. The block is tall and narrow (easy to topple) (aspect ratio 2.6). COM is at height 11.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.168 N\u00b7m.\n  Critical contact height: y_c > 3.4 cm (= 0.15 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 1.57 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 2.56 \u2192 very easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 81% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 15%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.748 N\u00b7m > \u03c4_critical = 0.168 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.591,
+      "contact_height_cm": 13.6,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 64.22,
+      "final_theta_deg": 64.22,
+      "slid_only": false,
+      "steps": 20
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_07.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 8,
+    "random_seed": 8,
+    "env_params": {
+      "block_width_cm": 6,
+      "block_height_cm": 20,
+      "block_mass_kg": 0.5,
+      "friction_coef": 0.35,
+      "aspect_ratio": 3.33
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 6.0cm wide x 20.0cm tall. Mass: 0.50kg. Surface friction coefficient: 0.35. The block is tall and narrow (easy to topple) (aspect ratio 3.3). COM is at height 10.0cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.147 N\u00b7m.\n  Critical contact height: y_c > 2.9 cm (= 0.15 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 1.72 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 3.33 \u2192 very easy to topple.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 81% to 90% of height.\n  Estimated friction regime: low.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 15%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.650 N\u00b7m > \u03c4_critical = 0.147 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.619,
+      "contact_height_cm": 12.4,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 64.91,
+      "final_theta_deg": 64.91,
+      "slid_only": false,
+      "steps": 20
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_08.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "block_toppling",
+    "method_name": "physcot",
+    "trial_id": 9,
+    "random_seed": 9,
+    "env_params": {
+      "block_width_cm": 11,
+      "block_height_cm": 17,
+      "block_mass_kg": 0.65,
+      "friction_coef": 0.58,
+      "aspect_ratio": 1.55
+    },
+    "task_instruction": "Push the upright block over so it topples.",
+    "scene_description": "A rectangular block stands upright on a flat surface. Block dimensions: 11.0cm wide x 17.0cm tall. Mass: 0.65kg. Surface friction coefficient: 0.58. The block is moderate aspect ratio (aspect ratio 1.5). COM is at height 8.5cm from the ground. Goal: push the block over so it falls (tilt > 60\u00b0).",
+    "reasoning_text": "Task decomposition:\n  Overall goal: topple the upright block so it falls.\n  Immediate sub-goal: create a torque about the pivot edge that drives COM outside the support base.\n  Contact change needed: apply lateral force above COM.\n\nRelevant physics:\n  Toppling requires \u03c4_push = F\u00b7y_c > \u03c4_gravity = m\u00b7g\u00b7(w/2) = 0.351 N\u00b7m.\n  Critical contact height: y_c > 7.0 cm (= 0.41 of block height).\n  Friction slide threshold: F_slide = \u03bc\u00b7m\u00b7g = 3.70 N.\n  Pushing above COM (> 50% height) maximises toppling torque.\n  Pushing below COM risks sliding without rotation.\n\nVisual physical estimates:\n  Block aspect ratio h/w = 1.55 \u2192 requires careful push height.\n  COM approximately at 50% of block height.\n  Pivot edge: bottom edge opposite push direction.\n  Best contact zone: upper 54% to 90% of height.\n  Estimated friction regime: medium.\n\nAction implication:\n  Contact point: 65% of block height (above critical threshold 41%).\n  Direction: perpendicular horizontal push into block face.\n  Force: steady lateral push (avoid impulse that may cause bounce).\n  Rationale: this creates \u03c4_push = 0.552 N\u00b7m > \u03c4_critical = 0.351 N\u00b7m \u2192 topple expected.",
+    "action_summary": {
+      "contact_height_frac": 0.624,
+      "contact_height_cm": 10.6,
+      "push_direction": "lateral_right"
+    },
+    "success": true,
+    "metrics": {
+      "max_tilt_deg": 61.43,
+      "final_theta_deg": 61.43,
+      "slid_only": true,
+      "steps": 400
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp1_block_toppling/physcot/trial_09.mp4",
+    "elapsed_s": 0.001
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 0,
+    "random_seed": 10,
+    "env_params": {
+      "obj_x": 0.45,
+      "obj_y": 0.3,
+      "obs_x": 0.25,
+      "obs_y": 0.22,
+      "obs_w": 0.12,
+      "obs_h": 0.18,
+      "goal_x": 0.1,
+      "goal_y": 0.4
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (45cm, 30cm). An obstacle (box 12cm\u00d718cm) is at (25cm, 22cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (10cm, 40cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select hook tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_00.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 1,
+    "random_seed": 11,
+    "env_params": {
+      "obj_x": 0.5,
+      "obj_y": 0.35,
+      "obs_x": 0.28,
+      "obs_y": 0.25,
+      "obs_w": 0.14,
+      "obs_h": 0.16,
+      "goal_x": 0.08,
+      "goal_y": 0.45
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (50cm, 35cm). An obstacle (box 14cm\u00d716cm) is at (28cm, 25cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (8cm, 45cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select straight tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 43.17,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_01.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 2,
+    "random_seed": 12,
+    "env_params": {
+      "obj_x": 0.4,
+      "obj_y": 0.28,
+      "obs_x": 0.22,
+      "obs_y": 0.2,
+      "obs_w": 0.1,
+      "obs_h": 0.2,
+      "goal_x": 0.12,
+      "goal_y": 0.38
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (40cm, 28cm). An obstacle (box 10cm\u00d720cm) is at (22cm, 20cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (12cm, 38cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select straight tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 29.73,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_02.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 3,
+    "random_seed": 13,
+    "env_params": {
+      "obj_x": 0.48,
+      "obj_y": 0.32,
+      "obs_x": 0.26,
+      "obs_y": 0.28,
+      "obs_w": 0.12,
+      "obs_h": 0.14,
+      "goal_x": 0.09,
+      "goal_y": 0.42
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (48cm, 32cm). An obstacle (box 12cm\u00d714cm) is at (26cm, 28cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (9cm, 42cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select hook tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_03.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 4,
+    "random_seed": 14,
+    "env_params": {
+      "obj_x": 0.42,
+      "obj_y": 0.38,
+      "obs_x": 0.24,
+      "obs_y": 0.3,
+      "obs_w": 0.11,
+      "obs_h": 0.18,
+      "goal_x": 0.11,
+      "goal_y": 0.48
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (42cm, 38cm). An obstacle (box 11cm\u00d718cm) is at (24cm, 30cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (11cm, 48cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select hook tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_04.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 5,
+    "random_seed": 15,
+    "env_params": {
+      "obj_x": 0.55,
+      "obj_y": 0.3,
+      "obs_x": 0.3,
+      "obs_y": 0.22,
+      "obs_w": 0.13,
+      "obs_h": 0.17,
+      "goal_x": 0.07,
+      "goal_y": 0.4
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (55cm, 30cm). An obstacle (box 13cm\u00d717cm) is at (30cm, 22cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (7cm, 40cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select straight tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 49.03,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_05.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 6,
+    "random_seed": 16,
+    "env_params": {
+      "obj_x": 0.45,
+      "obj_y": 0.25,
+      "obs_x": 0.25,
+      "obs_y": 0.18,
+      "obs_w": 0.12,
+      "obs_h": 0.16,
+      "goal_x": 0.1,
+      "goal_y": 0.35
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (45cm, 25cm). An obstacle (box 12cm\u00d716cm) is at (25cm, 18cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (10cm, 35cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select straight tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 36.4,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_06.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 7,
+    "random_seed": 17,
+    "env_params": {
+      "obj_x": 0.5,
+      "obj_y": 0.4,
+      "obs_x": 0.27,
+      "obs_y": 0.32,
+      "obs_w": 0.14,
+      "obs_h": 0.18,
+      "goal_x": 0.08,
+      "goal_y": 0.5
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (50cm, 40cm). An obstacle (box 14cm\u00d718cm) is at (27cm, 32cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (8cm, 50cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select hook tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_07.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 8,
+    "random_seed": 18,
+    "env_params": {
+      "obj_x": 0.38,
+      "obj_y": 0.3,
+      "obs_x": 0.21,
+      "obs_y": 0.24,
+      "obs_w": 0.1,
+      "obs_h": 0.22,
+      "goal_x": 0.13,
+      "goal_y": 0.4
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (38cm, 30cm). An obstacle (box 10cm\u00d722cm) is at (21cm, 24cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (13cm, 40cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select straight tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 26.93,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_08.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "baseline",
+    "trial_id": 9,
+    "random_seed": 19,
+    "env_params": {
+      "obj_x": 0.52,
+      "obj_y": 0.33,
+      "obs_x": 0.29,
+      "obs_y": 0.26,
+      "obs_w": 0.13,
+      "obs_h": 0.15,
+      "goal_x": 0.08,
+      "goal_y": 0.43
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (52cm, 33cm). An obstacle (box 13cm\u00d715cm) is at (29cm, 26cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (8cm, 43cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "[Baseline: no explicit geometry reasoning]\nAction: select straight tool based on visual inspection.",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 45.12,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/baseline/trial_09.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 0,
+    "random_seed": 10,
+    "env_params": {
+      "obj_x": 0.45,
+      "obj_y": 0.3,
+      "obs_x": 0.25,
+      "obs_y": 0.22,
+      "obs_w": 0.12,
+      "obs_h": 0.18,
+      "goal_x": 0.1,
+      "goal_y": 0.4
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (45cm, 30cm). An obstacle (box 12cm\u00d718cm) is at (25cm, 22cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (10cm, 40cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (45, 30) cm.\n  Obstacle at (25, 22) cm, size 12\u00d718 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 54.1 cm.\n  Obstacle\u2013robot distance: 33.3 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_00.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 1,
+    "random_seed": 11,
+    "env_params": {
+      "obj_x": 0.5,
+      "obj_y": 0.35,
+      "obs_x": 0.28,
+      "obs_y": 0.25,
+      "obs_w": 0.14,
+      "obs_h": 0.16,
+      "goal_x": 0.08,
+      "goal_y": 0.45
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (50cm, 35cm). An obstacle (box 14cm\u00d716cm) is at (28cm, 25cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (8cm, 45cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (50, 35) cm.\n  Obstacle at (28, 25) cm, size 14\u00d716 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 61.0 cm.\n  Obstacle\u2013robot distance: 37.5 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_01.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 2,
+    "random_seed": 12,
+    "env_params": {
+      "obj_x": 0.4,
+      "obj_y": 0.28,
+      "obs_x": 0.22,
+      "obs_y": 0.2,
+      "obs_w": 0.1,
+      "obs_h": 0.2,
+      "goal_x": 0.12,
+      "goal_y": 0.38
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (40cm, 28cm). An obstacle (box 10cm\u00d720cm) is at (22cm, 20cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (12cm, 38cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (40, 28) cm.\n  Obstacle at (22, 20) cm, size 10\u00d720 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 48.8 cm.\n  Obstacle\u2013robot distance: 29.7 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.\n\n[REASONING ERROR: incorrect path assessment led to wrong tool selection]",
+    "action_summary": {
+      "tool_chosen": "straight",
+      "correct_tool": "hook",
+      "tool_correct": false
+    },
+    "success": false,
+    "metrics": {
+      "tool_correct": false,
+      "path_feasible": false,
+      "dist_to_goal_cm": 29.73,
+      "direct_blocked": true
+    },
+    "failure_mode": "wrong_tool_path_blocked",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_02.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 3,
+    "random_seed": 13,
+    "env_params": {
+      "obj_x": 0.48,
+      "obj_y": 0.32,
+      "obs_x": 0.26,
+      "obs_y": 0.28,
+      "obs_w": 0.12,
+      "obs_h": 0.14,
+      "goal_x": 0.09,
+      "goal_y": 0.42
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (48cm, 32cm). An obstacle (box 12cm\u00d714cm) is at (26cm, 28cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (9cm, 42cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (48, 32) cm.\n  Obstacle at (26, 28) cm, size 12\u00d714 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 57.7 cm.\n  Obstacle\u2013robot distance: 38.2 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_03.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 4,
+    "random_seed": 14,
+    "env_params": {
+      "obj_x": 0.42,
+      "obj_y": 0.38,
+      "obs_x": 0.24,
+      "obs_y": 0.3,
+      "obs_w": 0.11,
+      "obs_h": 0.18,
+      "goal_x": 0.11,
+      "goal_y": 0.48
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (42cm, 38cm). An obstacle (box 11cm\u00d718cm) is at (24cm, 30cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (11cm, 48cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (42, 38) cm.\n  Obstacle at (24, 30) cm, size 11\u00d718 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 56.6 cm.\n  Obstacle\u2013robot distance: 38.4 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_04.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 5,
+    "random_seed": 15,
+    "env_params": {
+      "obj_x": 0.55,
+      "obj_y": 0.3,
+      "obs_x": 0.3,
+      "obs_y": 0.22,
+      "obs_w": 0.13,
+      "obs_h": 0.17,
+      "goal_x": 0.07,
+      "goal_y": 0.4
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (55cm, 30cm). An obstacle (box 13cm\u00d717cm) is at (30cm, 22cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (7cm, 40cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (55, 30) cm.\n  Obstacle at (30, 22) cm, size 13\u00d717 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 62.6 cm.\n  Obstacle\u2013robot distance: 37.2 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_05.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 6,
+    "random_seed": 16,
+    "env_params": {
+      "obj_x": 0.45,
+      "obj_y": 0.25,
+      "obs_x": 0.25,
+      "obs_y": 0.18,
+      "obs_w": 0.12,
+      "obs_h": 0.16,
+      "goal_x": 0.1,
+      "goal_y": 0.35
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (45cm, 25cm). An obstacle (box 12cm\u00d716cm) is at (25cm, 18cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (10cm, 35cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (45, 25) cm.\n  Obstacle at (25, 18) cm, size 12\u00d716 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 51.5 cm.\n  Obstacle\u2013robot distance: 30.8 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_06.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 7,
+    "random_seed": 17,
+    "env_params": {
+      "obj_x": 0.5,
+      "obj_y": 0.4,
+      "obs_x": 0.27,
+      "obs_y": 0.32,
+      "obs_w": 0.14,
+      "obs_h": 0.18,
+      "goal_x": 0.08,
+      "goal_y": 0.5
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (50cm, 40cm). An obstacle (box 14cm\u00d718cm) is at (27cm, 32cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (8cm, 50cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (50, 40) cm.\n  Obstacle at (27, 32) cm, size 14\u00d718 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 64.0 cm.\n  Obstacle\u2013robot distance: 41.9 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_07.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 8,
+    "random_seed": 18,
+    "env_params": {
+      "obj_x": 0.38,
+      "obj_y": 0.3,
+      "obs_x": 0.21,
+      "obs_y": 0.24,
+      "obs_w": 0.1,
+      "obs_h": 0.22,
+      "goal_x": 0.13,
+      "goal_y": 0.4
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (38cm, 30cm). An obstacle (box 10cm\u00d722cm) is at (21cm, 24cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (13cm, 40cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (38, 30) cm.\n  Obstacle at (21, 24) cm, size 10\u00d722 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 48.4 cm.\n  Obstacle\u2013robot distance: 31.9 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_08.mp4",
+    "elapsed_s": 0.0
+  },
+  {
+    "experiment_name": "tool_selection",
+    "method_name": "physcot",
+    "trial_id": 9,
+    "random_seed": 19,
+    "env_params": {
+      "obj_x": 0.52,
+      "obj_y": 0.33,
+      "obs_x": 0.29,
+      "obs_y": 0.26,
+      "obs_w": 0.13,
+      "obs_h": 0.15,
+      "goal_x": 0.08,
+      "goal_y": 0.43
+    },
+    "task_instruction": "Select the correct tool and move the object to the goal.",
+    "scene_description": "A target object (disc, radius 4.0cm) is at position (52cm, 33cm). An obstacle (box 13cm\u00d715cm) is at (29cm, 26cm). The direct path from robot to object is blocked by the obstacle. Goal region is at (8cm, 43cm). Available tools: Hook (curved end, can reach around obstacles) and Straight pusher (flat end, requires unobstructed path). Task: move the object to the goal region.",
+    "reasoning_text": "Task decomposition:\n  Overall goal: move the target object to the goal region.\n  Immediate sub-goal: select a tool that can reach the object and apply the required force without collision.\n  Contact change needed: effective contact between tool and object.\n\nRelevant physics:\n  Tool affordance determines reachable contact points and force direction.\n  Obstacle creates a geometric constraint on the direct approach path.\n  Hook geometry enables curved approach: can reach around an obstacle.\n  Straight tool can only exert force along its axis (direct push).\n  Force direction must point from object toward goal region.\n\nVisual physical estimates:\n  Target object at (52, 33) cm.\n  Obstacle at (29, 26) cm, size 13\u00d715 cm.\n  Direct path (robot\u2192object): BLOCKED by obstacle.\n  Distance from robot to object: 61.6 cm.\n  Obstacle\u2013robot distance: 38.9 cm.\n  Hook arc clearance: sufficient for curved approach.\n  Straight tool: requires blocked direct line of sight.\n\nAction implication:\n  Tool selection: HOOK.\n  Rationale: Direct path is blocked \u2192 straight tool cannot reach object. Hook's curved geometry enables arc approach around obstacle. Select Hook and approach from the open lateral side.\n  Approach direction: aligned with vector from object to goal region.",
+    "action_summary": {
+      "tool_chosen": "hook",
+      "correct_tool": "hook",
+      "tool_correct": true
+    },
+    "success": true,
+    "metrics": {
+      "tool_correct": true,
+      "path_feasible": true,
+      "dist_to_goal_cm": 0.0,
+      "direct_blocked": true
+    },
+    "failure_mode": "success",
+    "video_path": "results/videos/exp2_tool_selection/physcot/trial_09.mp4",
+    "elapsed_s": 0.0
+  }
+]

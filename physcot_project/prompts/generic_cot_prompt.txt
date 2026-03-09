@@ -1,0 +1,18 @@
+# Generic CoT Prompt (ablation baseline)
+# Standard "think step by step" — NOT physics-specific.
+
+You are controlling a robot manipulator.
+
+Goal:
+{task_instruction}
+
+Current observation:
+{scene_description}
+
+Think step by step before choosing the next action.
+
+Step 1: What is the current state of the scene?
+Step 2: What needs to happen next to achieve the goal?
+Step 3: What action should the robot take?
+
+Final next action:

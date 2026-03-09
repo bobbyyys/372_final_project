@@ -1,0 +1,106 @@
+# PhysCoT Prompt Template
+# Physics-Intuitive Chain-of-Thought for Robot Manipulation
+
+You are controlling a robot manipulator in a physics-based environment.
+Before proposing the next action, reason about the scene in a compact
+physics-intuitive format.
+
+Goal:
+{task_instruction}
+
+Current observation:
+{scene_description}
+
+Produce the following fields:
+
+Step A. Task decomposition:
+  - What is the overall goal?
+  - What is the immediate sub-goal?
+  - What contact change or object state change is needed next?
+
+Step B. Relevant physics:
+  - Which physical effects matter most right now?
+  - Consider: center of mass, torque/moment arm, stability, friction/slipping,
+    contact point selection, collision geometry, leverage, tool affordance,
+    constraint from support surface, expected motion after contact.
+
+Step C. Approximate physical quantities from vision:
+  - What quantities should be approximately inferred from the current image?
+  - Consider: approximate COM location, object orientation, aspect ratio,
+    stable/unstable face, distance from end-effector to contact point,
+    likely pivot edge, friction regime (low/medium/high), push direction,
+    push height relative to COM, free space, tool geometry.
+
+Step D. Physics-aware action reasoning:
+  - What action should be taken?
+  - Where to contact?
+  - In what direction?
+  - With what force/caution level?
+  - Why should this succeed physically?
+
+Rules:
+  - Focus on physically relevant reasoning.
+  - Mention approximate COM / pivot / friction / leverage / affordance when relevant.
+  - Do not give generic advice.
+  - Base the reasoning on the current image and manipulation objective.
+  - Keep each field short and concrete.
+
+Final next action:
+
+
+# ─── Block Toppling Example ───────────────────────────────────────────────────
+
+Step A. Task decomposition:
+  - Goal: topple the upright block so it falls.
+  - Immediate sub-goal: create a torque that moves COM outside the support base.
+  - Contact change: apply lateral force above COM height.
+
+Step B. Relevant physics:
+  - Stability of the upright block depends on COM projection over base.
+  - A higher lateral push creates larger torque: τ = F × y_c.
+  - Toppling condition: F·y_c > mg·(w/2). Critical height: y_c* = mgw/(2F).
+  - Friction at base may resist sliding (helps toppling if contact high enough).
+  - If push is below y_c*, block slides instead of rotating.
+
+Step C. Approximate physical quantities from vision:
+  - Block is tall and narrow (h/w ≈ 2.5), so it is easier to topple than slide.
+  - Likely pivot edge: lower edge opposite the push direction.
+  - Best contact point: above mid-height (65%–88% of block height).
+  - Friction regime: medium (μ ≈ 0.5, block unlikely to slide easily).
+
+Step D. Physics-aware action reasoning:
+  - Push laterally at 72% of block height (above y_c* ≈ 59%).
+  - Direction: horizontal, perpendicular to block face.
+  - Steady contact force — avoid impulse that may cause bounce.
+  - τ_push = F × 0.72h > τ_crit → topple expected.
+
+Final next action:
+  - Move end-effector to upper side face at 72% height and push laterally.
+
+
+# ─── Tool Selection Example ───────────────────────────────────────────────────
+
+Step A. Task decomposition:
+  - Goal: move the target object to the goal region.
+  - Immediate sub-goal: choose tool that can create effective contact without collision.
+  - Contact change: engage target object and displace it toward goal.
+
+Step B. Relevant physics:
+  - Tool geometry determines reachable contact points and force direction.
+  - A hook enables pulling around an obstacle or from a recessed region.
+  - A straight tool is better only when direct pushing is collision-free.
+  - Force direction must be aligned from object toward goal region.
+
+Step C. Approximate physical quantities from vision:
+  - Target object is partially blocked / recessed behind obstacle.
+  - Direct path from robot to object intersects obstacle.
+  - Hook can engage the far side of the object via arc approach.
+  - Straight pusher lacks a good collision-free contact path.
+
+Step D. Physics-aware action reasoning:
+  - Select hook tool — direct path is blocked, arc approach is feasible.
+  - Approach from the open lateral side.
+  - Pull object along the collision-free arc path toward goal.
+
+Final next action:
+  - Grasp hook tool and approach target from the open side for a pulling motion.

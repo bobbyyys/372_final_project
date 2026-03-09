@@ -1,0 +1,15 @@
+# Baseline Prompt (Plain OpenVLA approximation)
+# No explicit physics reasoning step.
+
+You are controlling a robot manipulator.
+
+Goal:
+{task_instruction}
+
+Current observation:
+{scene_description}
+
+Based on the observation and goal, choose an action.
+Provide the next action directly without additional reasoning.
+
+Final next action:
