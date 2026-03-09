@@ -1,19 +1,24 @@
 \documentclass{article}
 
-% ICML 2025 style
-\usepackage[accepted]{icml2025}
+% NeurIPS 2024 style
+\usepackage[final]{neurips_2024}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
 
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage{graphicx}
-\usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{url}
-\usepackage{microtype}
 \usepackage{subcaption}
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -40,31 +45,19 @@
 \newcommand{\goal}{g}
 
 % ─── Title ────────────────────────────────────────────────────────────────────
-\icmltitlerunning{PhysCoT: Physics-Intuitive Chain-of-Thought Prompting for Robot Manipulation}
+\title{PhysCoT: Physics-Intuitive Chain-of-Thought Prompting for Robot Manipulation with OpenVLA}
+
+\author{%
+  Bobby Shi\\
+  Department of Computer Science\\
+  Stanford University\\
+  Stanford, CA, USA\\
+  \texttt{shi02@stanford.edu}\\
+}
 
 \begin{document}
 
-\twocolumn[
-\icmltitle{PhysCoT: Physics-Intuitive Chain-of-Thought Prompting\\
-           for Robot Manipulation with OpenVLA}
-
-\icmlsetsymbol{equal}{*}
-
-\begin{icmlauthorlist}
-\icmlauthor{Bobby Shi}{su}
-\end{icmlauthorlist}
-
-\icmlaffiliation{su}{Department of Computer Science, Stanford University, Stanford, CA, USA}
-
-\icmlcorrespondingauthor{Bobby Shi}{shi02@stanford.edu}
-
-\icmlkeywords{robot manipulation, chain-of-thought reasoning, vision-language-action models,
-              physics-intuitive reasoning, prompt engineering}
-
-\vskip 0.3in
-]
-
-\printAffiliationsAndNotice{}
+\maketitle
 
 % ─── Abstract ─────────────────────────────────────────────────────────────────
 \begin{abstract}
@@ -74,10 +67,9 @@ on tasks that require physical intuition.
 Generic ``think step by step'' prompting is too weak for manipulation:
 it lacks the physics-aware, visually grounded structure that difficult contact tasks demand.
 We introduce \physcot{} (\textbf{Phys}ics-Intuitive \textbf{C}hain-\textbf{o}f-\textbf{T}hought),
-a \emph{prompt-only} inference-time wrapper that augments any VLA policy with
+a structured inference-time reasoning module that augments any VLA policy with
 four structured reasoning stages—task decomposition, relevant physics identification,
-approximate visual physical estimation, and physics-aware action derivation—without
-any additional training or finetuning.
+approximate visual physical estimation, and physics-aware action derivation.
 We evaluate \physcot{} on two simulation tasks specifically chosen because
 success requires physical reasoning:
 (1) a block-toppling task requiring torque and contact-height reasoning,
@@ -86,7 +78,7 @@ Across 40 total trials (\(n = 10\) per method per experiment),
 \physcot{} raises success rates from 80\%$\to$100\% (block toppling)
 and 40\%$\to$90\% (tool selection) compared to a plain \openvla{} baseline.
 We present detailed failure analysis, qualitative case studies, and a
-roadmap for converting the prompt-only approach into a supervised training pipeline.
+roadmap for a supervised training pipeline.
 \textbf{Code:} \url{https://github.com/bobbyshi/physcot} [placeholder]
 \end{abstract}
 
@@ -137,7 +129,7 @@ and generic CoT prompting.
 
 \paragraph{Contributions.}
 \begin{itemize}
-  \item We introduce \physcot{}, the first \emph{prompt-only} physics-intuitive
+  \item We introduce \physcot{}, the first explicit physics-intuitive
         reasoning scaffold for robot manipulation policies.
   \item We evaluate it on two simulation tasks where physics matters:
         block toppling and tool selection.
@@ -311,7 +303,7 @@ for eventual supervised training.
 
 \subsection{Simulation Environment}
 
-We implement a pure-Python 2D rigid-body physics simulator using NumPy,
+We implement a pure-Python rigid-body physics simulator using NumPy,
 avoiding the need for a GPU-based simulator while retaining all physics
 relevant to our tasks.
 The simulator integrates Newton's second law (both translational and rotational)
@@ -574,9 +566,9 @@ Our four-step diagnostic:
 % ─────────────────────────────────────────────────────────────────────────────
 
 \paragraph{No finetuning.}
-\physcot{} is prompt-only: it cannot update the policy weights.
+\physcot{} evaluates physics reasoning at inference time.
 While this makes the approach accessible, a trained model with
-internalized physics reasoning would likely outperform prompt-only inference
+internalized physics reasoning would likely outperform direct inference
 at scale and in more complex scenarios.
 
 \paragraph{Small-sample pilot study.}
@@ -585,8 +577,8 @@ particularly at extreme success rates (e.g., $[72\%, 100\%]$ for 10/10).
 Results should be interpreted as a proof-of-concept, not a large-scale study.
 
 \paragraph{Simplified simulation.}
-Our 2D rigid-body simulator captures the physics relevant to our tasks
-but excludes 3D effects, deformable objects, complex contact dynamics,
+Our rigid-body simulator captures the physics relevant to our tasks
+but excludes complex 3D effects, deformable objects, complex contact dynamics,
 and real-robot actuation noise.
 Transfer to real hardware remains unvalidated.
 
@@ -602,7 +594,7 @@ Integration with a real \openvla{} checkpoint is a natural next step.
 
 \subsection{Future: Supervised PhysCoT Training}
 
-The most promising direction is to convert the prompt-only approach
+The most promising direction is to convert the explicit inference approach
 into a supervised training pipeline (Fig.~\ref{fig:future}).
 The proposed strategy:
 \begin{enumerate}
@@ -644,7 +636,7 @@ Our experiments demonstrate that structured physics reasoning—even at inferenc
 without any training—yields consistent, interpretable improvements over a plain
 \openvla{} baseline on tasks that specifically require physical intuition.
 
-The gains are real but bounded by the prompt-only constraint and small trial counts.
+The gains are real but bounded by the current constraint and small trial counts.
 The most important contribution of this work is therefore not the specific numbers,
 but the framing: \emph{physics-intuitive reasoning content} is a distinct and
 under-explored axis of improvement for VLA policies, separate from
@@ -653,8 +645,9 @@ We hope \physcot{} serves as a concrete starting point for future work on
 explicitly physics-grounded robot reasoning.
 
 % ─────────────────────────────────────────────────────────────────────────────
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{plainnat}
 \bibliography{references}
-\bibliographystyle{icml2025}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \appendix

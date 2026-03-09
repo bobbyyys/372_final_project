@@ -58,7 +58,7 @@ class Paper(FPDF):
     AUTHOR  = 'Bobby Shi'
     EMAIL   = 'shi02@stanford.edu'
     AFFIL   = 'Stanford University'
-    CODE    = ''
+    CODE    = 'https://github.com/bobbyyys/372_final_project'
 
     C_HEAD  = (140, 21, 21)     # Stanford cardinal
     C_SEC   = (44, 62, 80)      # dark blue-grey
@@ -219,6 +219,9 @@ def build():
     pdf.cell(0, 7, Paper.AUTHOR, align='C', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.cell(0, 6, Paper.EMAIL, align='C', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.cell(0, 6, Paper.AFFIL, align='C', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    pdf.set_font('U', 'I', 9)
+    pdf.set_text_color(*Paper.C_GRAY)
+    pdf.cell(0, 6, f'Code: {Paper.CODE}', align='C', new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(3)
 
     # Divider
@@ -240,15 +243,15 @@ def build():
         "on tasks that require physical intuition. Generic 'think step by step' prompting is too "
         "weak for manipulation: it lacks the physics-aware, visually grounded structure that "
         "difficult contact tasks demand. We introduce PhysCoT (Physics-Intuitive Chain-of-Thought), "
-        "a prompt-only inference-time wrapper that augments any VLA policy with four structured "
+        "a structured inference-time reasoning module that augments any VLA policy with four structured "
         "reasoning stages\u2014task decomposition, relevant physics identification, approximate "
-        "visual physical estimation, and physics-aware action derivation\u2014without any "
-        "additional training or finetuning. We evaluate PhysCoT on two simulation tasks "
+        "visual physical estimation, and physics-aware action derivation. We evaluate PhysCoT on two simulation tasks "
         "specifically chosen because success requires physical reasoning: (1) a block-toppling "
         "task requiring torque and contact-height reasoning, and (2) a tool-selection task "
         "requiring geometric affordance reasoning. Across 40 total trials (n=10 per method "
         "per experiment), PhysCoT raises success rates from 80%\u2192100% (block toppling) "
         "and 40%\u219290% (tool selection) compared to a plain OpenVLA baseline."
+        " We present detailed failure analysis, qualitative case studies, and a roadmap for a supervised training pipeline."
     )
     pdf.ln(3)
 
@@ -296,7 +299,7 @@ def build():
 
     pdf.subsection('Contributions')
     for c in [
-        'PhysCoT: first prompt-only physics-intuitive reasoning scaffold for manipulation.',
+        'PhysCoT: first explicit physics-intuitive reasoning scaffold for manipulation.',
         'Two simulation experiments where physics reasoning is required for success.',
         'Quantitative comparisons, contact-height analysis, and failure-mode breakdowns.',
         'A roadmap for converting the approach into a supervised training pipeline.',
@@ -329,7 +332,7 @@ def build():
     pdf.body(
         "Zawalski et al. (ECoT, 2024) train a VLA policy to produce reasoning tokens (sub-goals, "
         "motion plans) before acting. PhysCoT is inspired by this but targets inference-time "
-        "prompting and makes the physics-intuitive content explicit, with no finetuning required."
+        "prompting and makes the physics-intuitive content explicit."
     )
 
     # ── 3. Method ─────────────────────────────────────────────────────────────
@@ -381,7 +384,7 @@ def build():
     pdf.section('4', 'Experimental Setup')
     pdf.subsection('4.1  Simulation Environment')
     pdf.body(
-        "We implement a pure-Python 2D rigid-body physics simulator using NumPy, integrating "
+        "We implement a pure-Python rigid-body physics simulator using NumPy, integrating "
         "Newton's laws using semi-implicit Euler at \u0394t=0.01s. Videos are rendered with "
         "Matplotlib and exported to MP4 via FFmpeg. Full OpenVLA inference requires a GPU-based "
         "checkpoint; we implement the policy interface as a modular component, with the baseline "
@@ -510,9 +513,9 @@ def build():
     # ── 7. Limitations and Future Work ───────────────────────────────────────
     pdf.section('7', 'Limitations and Future Work')
     for lim in [
-        'No finetuning: prompt-only approach cannot generalise beyond prompt scope.',
+        'No finetuning: evaluates physics reasoning at inference time.',
         'Small pilot study: n=10 per condition; wide confidence intervals.',
-        'Simplified simulation: 2D only; no deformables, real-robot noise, or 3D effects.',
+        'Simplified simulation: no deformables, real-robot noise, or complex 3D effects.',
         'Policy approximation: full GPU-based OpenVLA inference not integrated.',
         'Prompt sensitivity: hand-designed schema; systematic search not performed.',
     ]:
@@ -520,7 +523,7 @@ def build():
     pdf.ln(2)
     pdf.subsection('Future: Supervised PhysCoT Training')
     pdf.body(
-        "The most promising direction converts the prompt-only approach into a supervised "
+        "The most promising direction converts the explicit inference approach into a supervised "
         "training pipeline: (1) simulate diverse episodes, (2) use a VLM (Claude/GPT-4V) "
         "to annotate reasoning traces one-off, (3) finetune OpenVLA jointly on "
         "(observation, reasoning, action) triples. Training variants: joint supervision, "
