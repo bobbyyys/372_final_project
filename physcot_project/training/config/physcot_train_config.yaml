@@ -1,0 +1,14 @@
+model:
+  base_checkpoint: "openvla/openvla-7b"
+  lora_rank: 64
+  lora_alpha: 128
+
+data:
+  train_path: "data/physcot_training_data.jsonl"
+  val_path: "data/physcot_val_data.jsonl"
+
+training:
+  epochs: 5
+  batch_size: 16
+  learning_rate: 3e-4
+  output_dir: "checkpoints/physcot_vla_lora"
