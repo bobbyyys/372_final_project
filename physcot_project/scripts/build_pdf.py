@@ -274,14 +274,14 @@ def build():
     pdf.body(
         "Zawalski et al. (ECoT, 2024) showed that appending embodied chain-of-thought reasoning "
         "tokens before action prediction improves both performance and interpretability. However, "
-        "ECoT requires supervised finetuning, and the reasoning content is largely generic\u2014it "
+        "the reasoning content in ECoT is largely generic\u2014it "
         "does not systematically encourage physics-specific reasoning (torque, friction, stability, "
         "affordance)."
     )
     pdf.subsection('Our Proposal: PhysCoT')
     pdf.body(
-        "We ask: can structured physics-intuitive reasoning be added at inference time "
-        "without any training? Our method, PhysCoT, wraps any VLA in a four-stage template:"
+        "We investigate whether explicit, structured physics-intuitive reasoning can be elicited "
+        "via a prompt scaffold. Our method, PhysCoT, wraps any VLA in a four-stage template:"
     )
     for item in [
         'Step A. Task decomposition: overall goal and immediate sub-goal.',
@@ -344,7 +344,7 @@ def build():
     pdf.equation("r_t ~ p(r_t | o_t, g),    a_t ~ \u03c0(a_t | o_t, g, r_t)")
     pdf.body(
         "In ECoT, both p and \u03c0 are trained jointly. In PhysCoT, p is a structured "
-        "prompt template at inference time (no training), and \u03c0 is a frozen OpenVLA checkpoint."
+        "prompt template at inference time, and \u03c0 is a frozen OpenVLA checkpoint."
     )
 
     pdf.subsection('3.2  Physics: Block Toppling')
@@ -543,8 +543,7 @@ def build():
         "robot manipulation. The central argument: generic reasoning is insufficient for "
         "manipulation; useful inference-time reasoning must be physics-aware, visually "
         "grounded, and action-consequential. Our experiments demonstrate that structured "
-        "physics reasoning\u2014even at inference time without any training\u2014yields "
-        "consistent, interpretable improvements over a plain OpenVLA baseline on tasks "
+        "physics reasoning yields consistent, interpretable improvements over a plain OpenVLA baseline on tasks "
         "that specifically require physical intuition. The most important contribution is "
         "the framing: physics-intuitive reasoning content is a distinct, under-explored "
         "axis of improvement for VLA policies, separate from scale, data, or architecture."

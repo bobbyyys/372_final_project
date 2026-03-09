@@ -104,17 +104,14 @@ appending embodied chain-of-thought (ECoT) reasoning tokens before action
 prediction improves both performance and interpretability.
 Their model, trained to produce natural language sub-goals, scene descriptions,
 and motion directions, outperforms plain RT-2 on multiple benchmarks.
-However, ECoT training is expensive: it requires a dataset of (observation, reasoning, action)
-triples and a finetuning step on top of the base VLA.
-Moreover, the reasoning content in ECoT is largely \emph{generic}—it does not
+However, the reasoning content in ECoT is largely \emph{generic}—it does not
 systematically encourage the model to reason about the specific physics
 principles that govern manipulation outcomes (torque, friction, stability,
 geometric affordance).
 
 \paragraph{Our proposal: \physcot{}.}
-We ask whether explicit, structured \emph{physics-intuitive} reasoning
-can be added at \emph{inference time}—without any training—by designing
-the right prompt scaffold.
+We investigate whether explicit, structured \emph{physics-intuitive} reasoning
+can be elicited via a prompt scaffold.
 Our method, \physcot{}, wraps any VLA policy in a four-stage reasoning template:
 \begin{enumerate}
   \item[\textbf{A.}] \textbf{Task decomposition}: overall goal and immediate sub-goal.
@@ -195,7 +192,7 @@ A standard VLA policy defines:
 \end{align}
 In the \emph{supervised ECoT} setting, both $p$ and $\pi$ are trained jointly.
 In \physcot{}, $p$ is implemented by a structured prompt template evaluated
-at inference time (no training), and $\pi$ is a frozen \openvla{} checkpoint.
+at inference time, and $\pi$ is a frozen \openvla{} checkpoint.
 
 \subsection{Physics Rationale: Block Toppling}
 
@@ -634,8 +631,8 @@ for robot manipulation policies.
 The central argument is that generic reasoning is insufficient for manipulation:
 useful inference-time reasoning must be physics-aware, visually grounded, and
 action-consequential.
-Our experiments demonstrate that structured physics reasoning—even at inference time
-without any training—yields consistent, interpretable improvements over a plain
+Our experiments demonstrate that structured physics reasoning
+yields consistent, interpretable improvements over a plain
 \openvla{} baseline on tasks that specifically require physical intuition.
 
 The gains are real but bounded by the current constraint and small trial counts.
