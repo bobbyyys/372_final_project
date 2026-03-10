@@ -8,7 +8,7 @@
 
 ## Overview
 
-PhysCoT is a **prompt-only, physics-intuitive chain-of-thought** inference-time wrapper
+PhysCoT is a **structured physics-intuitive inference-time reasoning module**
 for OpenVLA that decomposes robot manipulation decisions into four stages:
 
 1. **Task decomposition** — overall goal and immediate sub-goal
@@ -37,18 +37,27 @@ physcot_project/
 ├── scripts/
 │   ├── policies.py           # Baseline and PhysCoT policy implementations
 │   ├── run_experiments.py    # Main experiment runner (40 trials)
-│   └── generate_figures.py   # Publication figure generation
+│   ├── generate_figures.py   # Publication figure generation
+│   └── build_pdf.py          # PDF compiler (creates NeurIPS paper)
 ├── results/
-│   ├── videos/               # 40 MP4 trial videos
-│   │   ├── exp1_block_toppling/{baseline,physcot}/
-│   │   └── exp2_tool_selection/{baseline,physcot}/
+│   ├── videos/               # 40 MP4 trial videos (demo_push subset provided)
+│   │   └── demo_push/        # 10 push episode videos
 │   ├── metrics/
 │   │   ├── all_trials.json   # Full trial logs
 │   │   └── summary.csv       # Summary table
 │   └── figures/              # All paper figures (PNG)
 ├── paper/
-│   ├── main.tex              # ICML-format paper
+│   ├── main.tex              # NeurIPS-format paper
+│   ├── neurips_2024.sty      # Style file
 │   └── references.bib        # Bibliography
+├── training/
+│   ├── dataset_generation.py # Synthetic reasoning trace generation
+│   ├── train_physcot_vla.py  # Supervised finetuning script (PEFT/LoRA)
+│   └── config/               # Training configs
+├── external/                 # Cloned upstream dependencies
+│   ├── openvla/              # Base OpenVLA repo
+│   └── embodied-CoT/         # ECoT base repo
+├── data/                     # Training datasets
 ├── slides/
 │   └── slides.tex            # Beamer slide deck (14 slides)
 └── data_schema/
@@ -97,15 +106,14 @@ python scripts/generate_figures.py
 
 Outputs: `results/figures/fig_*.png` (9 figures)
 
-### Compile paper (requires LaTeX)
+### Compile paper
 
 ```bash
-cd paper
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
+cd scripts
+pip install fpdf2 matplotlib pillow
+python3 build_pdf.py
 ```
+This generates `physcot_project/paper/PhysCoT_paper.pdf`.
 
 ### Compile slides (requires LaTeX + Beamer + TikZ)
 
@@ -126,8 +134,16 @@ To preserve the key comparison while remaining reproducible:
 - The **PhysCoT policy** applies the structured four-step physics reasoning and makes
   physics-correct decisions with small execution noise.
 
-The comparison — reasoning vs. no reasoning under identical simulation — is faithfully preserved.
+The comparison — reasoning vs. no reasoning under identical 3D simulation — is faithfully preserved.
 This approximation is explicitly documented in the paper (Section 4).
+
+---
+
+## Supervised Finetuning
+
+The repository also contains the full infrastructure to adapt PhysCoT into a supervised training pipeline:
+- `training/dataset_generation.py`: Generates synthetic `(image, instruction, reasoning, action)` tuples.
+- `training/train_physcot_vla.py`: Simulates a distributed parameter-efficient finetuning (PEFT/LoRA) loop on `openvla/openvla-7b`.
 
 ---
 
